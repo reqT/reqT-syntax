@@ -1,36 +1,17 @@
 //To patch the generated ReqTTokenMaker.java, do the following
 
-//search replace:
+//search for:
+
 zzCurrentPos = zzMarkedPos = zzPushbackPos = s.offset;
-//with:
+
+//and replace with:
+
 zzCurrentPos = zzMarkedPos = s.offset;
 
-//search delete these two methods:
+//search for and delete these two methods:
 
-/**
-   * Refills the input buffer.
-   *
-   * @return      <code>false</code>, iff there was new input.
-   * 
-   * @exception   java.io.IOException  if any I/O-Error occurs
-   */
-  private boolean zzRefill() throws java.io.IOException {
+private boolean zzRefill() throws java.io.IOException {
   
-// delete until but not including next /**
+public final void yyreset(java.io.Reader reader) {
   
-
-  /**
-   * Resets the scanner to read from a new input stream.
-   * Does not close the old reader.
-   *
-   * All internal variables are reset, the old input stream 
-   * <b>cannot</b> be reused (internal buffer is discarded and lost).
-   * Lexical state is set to <tt>ZZ_INITIAL</tt>.
-   *
-   * Internal scan buffer is resized down to its initial length, if it has grown.
-   *
-   * @param reader   the new input stream 
-   */
-  public final void yyreset(java.io.Reader reader) {
-  
-// delete until but not including next /**
+// delete from the /** opening comment until end of method just before next /**

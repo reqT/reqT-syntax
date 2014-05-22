@@ -285,7 +285,7 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
 
 <YYINITIAL> {
  
-  /* Keywords */
+  /* Scala Keywords */
 	"abstract" |
 	"case" |
 	"catch" |
@@ -325,6 +325,11 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
 	"while" |
 	"with" |
 	"yield" { addToken(Token.RESERVED_WORD); }
+ 
+/* reqT BEGIN */  
+
+/* reqT Entity types */ 
+
    "Ent" |   
    "Meta" |
    "Item" |
@@ -353,6 +358,8 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
    "UserStory" |
    "UseCase"  { addToken(Token.DATA_TYPE); }
    
+   /* reqT Attribute types */ 
+   
     "Attr" |
     "Code" |
     "Constraints" |
@@ -369,11 +376,15 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
     "Cost" |
     "Opt" { addToken(Token.RESERVED_WORD_2); }
 
+   /* reqT Relation types */ 
+    
     "has" |
     "is" |
     "superOf" |
     "requires" |
     "relatesTo" { addToken(Token.FUNCTION); }
+    
+/* reqT END */  
 
    
 	{LineTerminator}				{ addNullToken(); return firstToken; }

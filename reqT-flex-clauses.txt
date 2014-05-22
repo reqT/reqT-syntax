@@ -1,0 +1,59 @@
+/* reqT BEGIN */  
+
+/* reqT Entity types */ 
+
+   "Ent" |   
+   "Meta" |
+   "Item" |
+   "Label" |
+   "Section" |
+   "Actor" |
+   "Product" |
+   "Release" |
+   "Resource" |
+   "Stakeholder" |
+   "Subdomain" |
+   "System" |
+   "Req" |
+   "Idea" |
+   "Feature" |
+   "Goal" |
+   "Function" |
+   "Interface" |
+   "Design" |
+   "Quality" |
+   "Target" |
+   "Barrier" |
+   "Scenario" |
+   "Task" |
+   "TestCase" |
+   "UserStory" |
+   "UseCase"  { addToken(Token.DATA_TYPE); }
+   
+   /* reqT Attribute types */ 
+   
+    "Attr" |
+    "Code" |
+    "Constraints" |
+    "Text" |
+    "Title" |
+    "Spec" |
+    "Gist" |
+    "Why" |
+    "Example" |
+    "Input" |
+    "Output" |
+    "Expectation" |
+    "Prio" |
+    "Cost" |
+    "Opt" { addToken(Token.RESERVED_WORD_2); }
+
+   /* reqT Relation types */ 
+    
+    "has" |
+    "is" |
+    "superOf" |
+    "requires" |
+    "relatesTo" { addToken(Token.FUNCTION); }
+    
+/* reqT END */  

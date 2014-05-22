@@ -21,10 +21,11 @@ Install these applications first:
 Steps
 -------
 
-1. [Optional] If you have changed the metamodel of reqT, regenerate the ```reqT-flex-clauses.txt``` using the command ```reqt -j``` and insert the reqT flex clauses in the ```ReqTTokenGenerator.flex``` file (look for comments on ENTITY TYPES etc in the file to find what to replace).
-2. Run ```jflex ReqTTokenGenerator.flex``` to re-generate ```ReqTTokenGenerator.java```
-3. Patch by hand the new ```ReqTTokenGenerator.java``` file according to the instructions in ```how-to-patch.txt```
-4. Put the patched ReqTTokenGenerator in the src/... lib (replace the old one)
-5. Run ```ant``` to build a new ```rsyntaxtextarea.jar```
-6. Put the ```rsyntaxtextarea.jar``` file in your reqT repo under reqT/lib
-7. Build reqT according to instructions in the [main reqT repo](https://github.com/reqT/reqT) 
+1. If you have changed the metamodel of reqT inside reqT, regenerate the ```reqT-flex-clauses.txt``` using the command ```reqt -j```
+2. Insert the new ```reqT-flex-clause.txt``` clauses in the ```ReqTTokenGenerator.flex``` file (look for comment ```/* reqT BEGIN */``` in the file to find what to replace).
+3. Run ```jflex ReqTTokenGenerator.flex``` to re-generate ```ReqTTokenGenerator.java```
+4. Patch by hand the new ```ReqTTokenGenerator.java``` file according to the instructions in ```how-to-patch.txt```
+5. Put the patched ReqTTokenGenerator.java in this dir by replacing the old one: [src\org\fife\ui\rsyntaxtextarea\modes](https://github.com/reqT/reqT-syntax/tree/master/src/org/fife/ui/rsyntaxtextarea/modes) 
+6. Run ```ant``` to build a new ```rsyntaxtextarea.jar```
+7. Put the ```rsyntaxtextarea.jar``` file in your reqT repo under reqT/lib
+8. Build reqT according to instructions in the [main reqT repo](https://github.com/reqT/reqT) 

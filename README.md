@@ -21,10 +21,10 @@ Install these applications first:
 Steps
 -------
 
-1. [Optional] If you have changed the metamodel of reqT, regenerate the ´´reqT-flex-clauses.txt´´ using the command ´´reqt -j´´ and paste the output into ´´reqT-flex-clauses.txt´´ file. Then insert the reqT flex clauses in the ReqTTokenGenerator.flex file.
-2. run ´´jflex´´  ReqTTokenGenerator.flex to generate ReqTTokenGenerator.java
-3. Patch by hand the ReqTTokenGenerator according to the instructions in how-to-patch.txt
+1. [Optional] If you have changed the metamodel of reqT, regenerate the ´´´reqT-flex-clauses.txt´´´ using the command ´´´reqt -j´´´ and insert the reqT flex clauses in the ´´´ReqTTokenGenerator.flex´´´ file (look for comments on ENTITY TYPES etc in the file to find what to replace).
+2. Run ´´´jflex ReqTTokenGenerator.flex´´´ to re-generate ´´´ReqTTokenGenerator.java´´´
+3. Patch by hand the new ´´´ReqTTokenGenerator.java´´´ file according to the instructions in ´´´how-to-patch.txt´´´
 4. Put the patched ReqTTokenGenerator in the src/... lib (replace the old one)
-5. run ´´ant´´ to build a new rsyntaxtextarea.jar
-6. put the rsyntaxtextarea.jar file in your reqT repo under reqT/lib
-7. build reqT according to instructions in the main reqT repo 
+5. Run ´´´ant´´´ to build a new ´´´rsyntaxtextarea.jar´´´
+6. Put the ´´´rsyntaxtextarea.jar´´´ file in your reqT repo under reqT/lib
+7. Build reqT according to instructions in the [main reqT repo](https://github.com/reqT/reqT) 

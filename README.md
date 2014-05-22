@@ -2,7 +2,7 @@ reqT-syntax
 ==============
 
 Syntax highlighting lib for reqT based on [RSyntaxTextArea](http://fifesoft.com/rsyntaxtextarea/) and [JFlex](http://jflex.de/). Many thanks to those projects!
-The repo is used to build a customized rsyntaxtextarea.jar that is a lib used by reqT.
+The repo is used to build a customized rsyntaxtextarea.jar to be used as a lib for [reqT](https://github.com/reqT/reqT).
 
 
 How to build

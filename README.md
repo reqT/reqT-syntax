@@ -1,7 +1,7 @@
-reqT-highlight
+reqT-syntax
 ==============
 
-Syntax highlighting lib for reqT based on RSyntaxTextArea and JFlex. Many thanks to those projects!
+Syntax highlighting lib for reqT based on [RSyntaxTextArea](http://fifesoft.com/rsyntaxtextarea/) and [JFlex](http://jflex.de/). Many thanks to those projects!
 The repo is used to build a customized rsyntaxtextarea.jar that is a lib used by reqT.
 
 

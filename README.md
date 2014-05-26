@@ -29,7 +29,7 @@ Steps
 Copy-replace in your desktop or use commands in terminal similar to:
 
         rm src/org/fife/ui/rsyntaxtextarea/modes/ReqTTokenMaker.java
-        mv ReqTTokenMaker.java src/org/fife/ui/rsyntaxtextarea/modes/.
+        cp ReqTTokenMaker.java src/org/fife/ui/rsyntaxtextarea/modes/.
     
 6. Run ```ant``` to build a new ```rsyntaxtextarea.jar```  (ignore the 4 deprecation warnings)
 7. Put the [dist/rsyntaxtextarea.jar](https://github.com/reqT/reqT-syntax/tree/master/dist) file in your reqT repo under [reqT/lib](https://github.com/reqT/reqT)

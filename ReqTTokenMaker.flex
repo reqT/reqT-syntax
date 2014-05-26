@@ -394,7 +394,7 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
 	{Whitespace}					{ addToken(Token.WHITESPACE); }
 
 	/* String/Character literals. */
-	\"\"\"						{ start = zzMarkedPos-3; yybegin(MULTILINE_STRING_DOUBLE); }
+ /*	\"\"\"						{ start = zzMarkedPos-3; yybegin(MULTILINE_STRING_DOUBLE); }  */
 	{UnclosedCharLiteral}			{ addToken(Token.ERROR_CHAR); addNullToken(); return firstToken; }
 	{CharLiteral}				{ addToken(Token.LITERAL_CHAR); }
 	{UnclosedStringLiteral}			{ addToken(Token.ERROR_STRING_DOUBLE); addNullToken(); return firstToken; }
@@ -423,11 +423,12 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
 <MULTILINE_STRING_DOUBLE> {
 	[^\"\\\n]*				{}
 	\\.?						{ /* Skip escaped chars, handles case: '\"""'. */ }
-	\"\"\"					{ addToken(start,zzStartRead+2, Token.LITERAL_STRING_DOUBLE_QUOTE); yybegin(YYINITIAL); }
+	\"\"\"					{ /* addToken(start,zzStartRead+2, Token.LITERAL_STRING_DOUBLE_QUOTE); yybegin(YYINITIAL); */ }
 	\"						{}
 	\n |
 	<<EOF>>					{ addToken(start,zzStartRead-1, Token.LITERAL_STRING_DOUBLE_QUOTE); return firstToken; }
 }
+
 
 <MLC> {
 	[^hwf\n\*]+				{}

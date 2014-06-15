@@ -720,9 +720,10 @@ public class RSyntaxUtilities implements SwingConstants {
 				}
 				else {
 					pos = Math.max(0, pos - 1);
-					if (target.isCodeFoldingEnabled()) {
-						int last = target.getLineOfOffset(pos+1);
-						int current = target.getLineOfOffset(pos);
+					if (target.isCodeFoldingEnabled() && 
+              view.getDocument().getLength() > 0) {//fix by Bjorn Regnell 2014-06-05
+						int last = target.getLineOfOffset(pos+1); //this crashes if document is empty hence fix
+						int current = target.getLineOfOffset(pos); 
 						if (last!=current) { // If moving up a line...
 							FoldManager fm = target.getFoldManager();
 							if (fm.isLineHidden(current)) {
@@ -740,9 +741,10 @@ public class RSyntaxUtilities implements SwingConstants {
 				}
 				else {
 					pos = Math.min(pos + 1, view.getDocument().getLength());
-					if (target.isCodeFoldingEnabled()) {
-						int last = target.getLineOfOffset(pos-1);
-						int current = target.getLineOfOffset(pos);
+					if (target.isCodeFoldingEnabled() && 
+              view.getDocument().getLength() > 0) { //fix by Bjorn Regnell 2014-06-05
+						int last = target.getLineOfOffset(pos-1); //this crashes if document is empty hence fix
+						int current = target.getLineOfOffset(pos);  
 						if (last!=current) { // If moving down a line...
 							FoldManager fm = target.getFoldManager();
 							if (fm.isLineHidden(current)) {

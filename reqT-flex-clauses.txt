@@ -1,59 +1,99 @@
-/* reqT BEGIN */  
+ /* Entity Types */ 
+ "Ent" | 
+ "Meta" | 
+ "Item" | 
+ "Label" | 
+ "Section" | 
+ "Term" | 
+ "Actor" | 
+ "Application" | 
+ "Component" | 
+ "Domain" | 
+ "Module" | 
+ "Product" | 
+ "Release" | 
+ "Resource" | 
+ "Risk" | 
+ "Service" | 
+ "Stakeholder" | 
+ "System" | 
+ "User" | 
+ "Class" | 
+ "Data" | 
+ "Input" | 
+ "Member" | 
+ "Output" | 
+ "Relationship" | 
+ "Design" | 
+ "Screen" | 
+ "MockUp" | 
+ "Function" | 
+ "Interface" | 
+ "Epic" | 
+ "Feature" | 
+ "Goal" | 
+ "Idea" | 
+ "Issue" | 
+ "Req" | 
+ "Ticket" | 
+ "WorkPackage" | 
+ "Quality" | 
+ "Target" | 
+ "Barrier" | 
+ "Scenario" | 
+ "Task" | 
+ "Test" | 
+ "Story" | 
+ "UseCase" | 
+ "Configuration" | 
+ "VariationPoint" | 
+ "Variant" { addToken(Token.DATA_TYPE); } 
 
-/* reqT Entity types */ 
+ /* Attribute Types */ 
+ "Attr" | 
+ "Code" | 
+ "Constraints" | 
+ "Comment" | 
+ "Deprecated" | 
+ "Example" | 
+ "Expectation" | 
+ "File" | 
+ "Gist" | 
+ "Image" | 
+ "Spec" | 
+ "Text" | 
+ "Title" | 
+ "Why" | 
+ "Benefit" | 
+ "Capacity" | 
+ "Cost" | 
+ "Damage" | 
+ "Differentiation" | 
+ "Frequency" | 
+ "Min" | 
+ "Max" | 
+ "Order" | 
+ "Prio" | 
+ "Probability" | 
+ "Profit" | 
+ "Saturation" | 
+ "Utility" | 
+ "Value" | 
+ "Status" { addToken(Token.RESERVED_WORD_2); } 
 
-   "Ent" |   
-   "Meta" |
-   "Item" |
-   "Label" |
-   "Section" |
-   "Actor" |
-   "Product" |
-   "Release" |
-   "Resource" |
-   "Stakeholder" |
-   "Subdomain" |
-   "System" |
-   "Req" |
-   "Idea" |
-   "Feature" |
-   "Goal" |
-   "Function" |
-   "Interface" |
-   "Design" |
-   "Quality" |
-   "Target" |
-   "Barrier" |
-   "Scenario" |
-   "Task" |
-   "TestCase" |
-   "UserStory" |
-   "UseCase"  { addToken(Token.DATA_TYPE); }
-   
-   /* reqT Attribute types */ 
-   
-    "Attr" |
-    "Code" |
-    "Constraints" |
-    "Text" |
-    "Title" |
-    "Spec" |
-    "Gist" |
-    "Why" |
-    "Example" |
-    "Input" |
-    "Output" |
-    "Expectation" |
-    "Prio" |
-    "Cost" |
-    "Opt" { addToken(Token.RESERVED_WORD_2); }
-
-   /* reqT Relation types */ 
-    
-    "has" |
-    "is" |
-    "superOf" |
-    "requires" |
-    "relatesTo" { addToken(Token.FUNCTION); }
-    
-/* reqT END */  
+ /* Relation Types */ 
+ "has" | 
+ "is" | 
+ "superOf" | 
+ "binds" | 
+ "deprecates" | 
+ "excludes" | 
+ "helps" | 
+ "hurts" | 
+ "impacts" | 
+ "implements" | 
+ "interactsWith" | 
+ "precedes" | 
+ "requires" | 
+ "relatesTo" | 
+ "verifies" { addToken(Token.FUNCTION); } 

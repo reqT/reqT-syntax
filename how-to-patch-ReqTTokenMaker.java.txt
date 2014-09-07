@@ -10,8 +10,14 @@ zzCurrentPos = zzMarkedPos = s.offset;
 
 //search for and delete these two methods:
 
-private boolean zzRefill() throws java.io.IOException {
+private boolean zzRefill() throws java.io.IOException {  
+  // the long zzRefill() method with around 50 lines of code should be deleted
+  // the short zzRefill() method with only one line should NOT be deleted 
+}
   
 public final void yyreset(java.io.Reader reader) {
+  // the yyreset(java.io.Reader reader) that is not declared to throw should be deleted
+  // the yyreset(java.io.Reader reader) that throws IOException should NOT be deleted
+}
   
 // delete from the /** opening comment until end of method just before next /**

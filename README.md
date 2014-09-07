@@ -12,7 +12,7 @@ The build process is a bit tricky as it involves manual patching of a generated 
 
 Prerequisites
 --------------
-Install these applications first if you don't have the already:
+Install these applications first if you don't have them already:
 * Java JDK to compile the code
 * JFlex to generate token generator
 * Apache Ant to build the project
@@ -20,8 +20,8 @@ Install these applications first if you don't have the already:
 Steps
 -------
 
-1. If you have changed the metamodel of reqT inside reqT, regenerate the ```reqT-flex-clauses.txt``` using the command ```reqt -f```
-2. Insert the new ```reqT-flex-clause.txt``` clauses in the ```ReqTTokenGenerator.flex``` file (look for comment ```/* reqT BEGIN */``` in the file to find what to replace).
+1. If you have changed the metamodel of reqT inside reqT, regenerate the ```reqT-flex-clauses.txt``` by using the ```-f``` parameter to reqt with the command ```java -jar reqT.jar -f``` and a new file will be written.
+2. Insert the new clauses from the ```reqT-flex-clause.txt``` file in the ```ReqTTokenGenerator.flex``` file (look for comment ```/* reqT BEGIN */``` in the file to find what to replace).
 3. Run ```jflex ReqTTokenMaker.flex``` to generate a new [ReqTTokenMaker.java]( https://github.com/reqT/reqT-syntax/blob/master/ReqTTokenMaker.java)
 4. Patch by hand the generated ReqTTokenGenerator.java file according to the instructions in [how-to-patch.txt](https://github.com/reqT/reqT-syntax/blob/master/how-to-patch-ReqTTokenMaker.java.txt)
 5. Put the patched ReqTTokenGenerator.java in this dir by replacing the old one: [src\org\fife\ui\rsyntaxtextarea\modes](https://github.com/reqT/reqT-syntax/tree/master/src/org/fife/ui/rsyntaxtextarea/modes) 
@@ -32,4 +32,4 @@ Copy-replace in your desktop or use commands in terminal similar to:
     
 6. Run ```ant``` to build a new ```rsyntaxtextarea.jar```  (ignore the 4 deprecation warnings)
 7. Put the [dist/rsyntaxtextarea.jar](https://github.com/reqT/reqT-syntax/tree/master/dist) file in your reqT repo under [reqT/lib](https://github.com/reqT/reqT)
-8. Build reqT according to instructions in the [main reqT repo](https://github.com/reqT/reqT) 
+8. Run the ```makebin``` script and then the ```build``` script in the [main reqT repo](https://github.com/reqT/reqT) 

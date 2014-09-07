@@ -336,7 +336,7 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
  "Section" | 
  "Term" | 
  "Actor" | 
- "Application" | 
+ "App" | 
  "Component" | 
  "Domain" | 
  "Module" | 
@@ -367,15 +367,15 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
  "Req" | 
  "Ticket" | 
  "WorkPackage" | 
+ "Breakpoint" | 
+ "Barrier" | 
  "Quality" | 
  "Target" | 
- "Barrier" | 
  "Scenario" | 
  "Task" | 
  "Test" | 
  "Story" | 
  "UseCase" | 
- "Configuration" | 
  "VariationPoint" | 
  "Variant" { addToken(Token.DATA_TYPE); } 
 
@@ -387,7 +387,7 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
  "Deprecated" | 
  "Example" | 
  "Expectation" | 
- "File" | 
+ "FileName" | 
  "Gist" | 
  "Image" | 
  "Spec" | 
@@ -398,7 +398,6 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
  "Capacity" | 
  "Cost" | 
  "Damage" | 
- "Differentiation" | 
  "Frequency" | 
  "Min" | 
  "Max" | 
@@ -406,8 +405,6 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
  "Prio" | 
  "Probability" | 
  "Profit" | 
- "Saturation" | 
- "Utility" | 
  "Value" | 
  "Status" { addToken(Token.RESERVED_WORD_2); } 
 

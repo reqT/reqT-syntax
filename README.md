@@ -20,7 +20,7 @@ Install these applications first if you don't have them already:
 Steps
 -------
 
-1. If you have changed the metamodel of reqT inside reqT, regenerate the ```reqT-flex-clauses.txt``` by using the ```-f``` parameter to reqt with the command ```java -jar reqT.jar -f``` and a new file will be written.
+1. If you have changed the metamodel of reqT inside reqT, regenerate the ```reqT-flex-clauses.txt``` by using the ```-f``` parameter to reqt with the command ```java -jar reqT.jar -f``` and a new file will be written. 
 2. Insert the new clauses from the ```reqT-flex-clause.txt``` file in the ```ReqTTokenGenerator.flex``` file (look for comment ```/* reqT BEGIN */``` in the file to find what to replace).
 3. Run ```jflex ReqTTokenMaker.flex``` to generate a new [ReqTTokenMaker.java]( https://github.com/reqT/reqT-syntax/blob/master/ReqTTokenMaker.java)
 4. Patch by hand the generated ReqTTokenGenerator.java file according to the instructions in [how-to-patch.txt](https://github.com/reqT/reqT-syntax/blob/master/how-to-patch-ReqTTokenMaker.java.txt)

@@ -6,7 +6,7 @@
  "Section" | 
  "Term" | 
  "Actor" | 
- "Application" | 
+ "App" | 
  "Component" | 
  "Domain" | 
  "Module" | 
@@ -29,6 +29,8 @@
  "MockUp" | 
  "Function" | 
  "Interface" | 
+ "State" | 
+ "Event" | 
  "Epic" | 
  "Feature" | 
  "Goal" | 
@@ -37,15 +39,15 @@
  "Req" | 
  "Ticket" | 
  "WorkPackage" | 
+ "Breakpoint" | 
+ "Barrier" | 
  "Quality" | 
  "Target" | 
- "Barrier" | 
  "Scenario" | 
  "Task" | 
  "Test" | 
  "Story" | 
  "UseCase" | 
- "Configuration" | 
  "VariationPoint" | 
  "Variant" { addToken(Token.DATA_TYPE); } 
 
@@ -57,7 +59,7 @@
  "Deprecated" | 
  "Example" | 
  "Expectation" | 
- "File" | 
+ "FileName" | 
  "Gist" | 
  "Image" | 
  "Spec" | 
@@ -68,7 +70,6 @@
  "Capacity" | 
  "Cost" | 
  "Damage" | 
- "Differentiation" | 
  "Frequency" | 
  "Min" | 
  "Max" | 
@@ -76,8 +77,6 @@
  "Prio" | 
  "Probability" | 
  "Profit" | 
- "Saturation" | 
- "Utility" | 
  "Value" | 
  "Status" { addToken(Token.RESERVED_WORD_2); } 
 

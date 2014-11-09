@@ -358,9 +358,7 @@ URL						= (((https?|f(tp|ile))"://"|"www.")({URLCharacters}{URLEndCharacter})?)
  "Screen" | 
  "MockUp" | 
  "Function" | 
- "Interface" |
- "State" |
- "Event" |
+ "Interface" | 
  "Epic" | 
  "Feature" | 
  "Goal" | 
